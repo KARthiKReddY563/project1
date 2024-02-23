@@ -47,9 +47,8 @@ module.exports.isReviewAuthor= async (req,res,next)=>{
 
 
 module.exports.validateListing=(req,res,next)=>{
-  let url =req.body.listing.image;
-  console.log(url);
-  let filename ="listingimage";
+  let url=req.file.path;
+  let filename=req.file.filename;
   req.body.listing.image ={url,filename};
     let {error} =listingSchema.validate(req.body);
   

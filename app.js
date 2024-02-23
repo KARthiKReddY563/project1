@@ -1,3 +1,8 @@
+if(process.env.NODE_ENV !="production"){
+  require('dotenv').config()
+}
+
+
 const  express = require('express')
 const app = express()
 const port = 8080
@@ -6,6 +11,7 @@ const Listing=require("./models/listing");
 const path=require("path");
 const methodOverride=require("method-override");
 const ejsMate=require("ejs-mate");
+
 
 const ExpressError=require("./utils/ExpressError.js")
 const session =require("express-session");

@@ -1,7 +1,9 @@
 <% layout("/layouts/boilerplate.ejs") %>
 <body>
     
-    <form  method="post" class="needs-validation" novalidate action="/listings/<%= listing._id %>?_method=PUT">
+    <form  method="post" class="needs-validation"
+    enctype="multipart/form-data"
+    novalidate action="/listings/<%= listing._id %>?_method=PUT">
       <div class="row ">
         <div class="col-8 offset-2">
             <h3 > Edit you new listing</h3>
@@ -22,8 +24,8 @@
             </div>
            
             <div class="mb-3" >
-                <label for="image" class="form-label">Image</label>
-                <input type="text" name="listing[image]"  required class="form-control"value="<%= listing.image.url %>">
+                <label for="image" class="form-label">Upload New Image</label>
+                <input type="file" name="listing[image]"  required class="form-control">
                 <div class="invalid-feedback">
                     Invalid
                     </div>
