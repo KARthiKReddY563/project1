@@ -1,7 +1,5 @@
 {
-  "engines": {
-    "node": "20.11.0"
-  },
+ 
   "name": "projecta",
   "version": "1.0.0",
   "description": "",
