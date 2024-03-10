@@ -116,3 +116,7 @@ font-weight: 400;
     margin-right: auto !important;
     right: 25px !important;
 }
+#map{
+     height: 60vh;
+     width: 90vh;
+}
